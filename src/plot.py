@@ -52,7 +52,7 @@ def plot_ts(
     """
     Plot time-series data
     """
-    ts_data_to_plot = ts_data[ts_data.pickup_location_id.isin(locations)] if locations else rides
+    ts_data_to_plot = ts_data[ts_data.pickup_location_id.isin(locations)] if locations else ts_data
 
     fig = px.line(
         ts_data,
